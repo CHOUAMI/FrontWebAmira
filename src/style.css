@@ -1,0 +1,63 @@
+/* src/style.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-gray-900 text-gray-100;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        @apply w-2;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-gray-800;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-gray-600 rounded-full;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-gray-500;
+    }
+}
+
+@layer components {
+    /* Form inputs */
+    .form-input {
+        @apply bg-gray-800 border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+    }
+
+    /* Buttons */
+    .btn {
+        @apply px-4 py-2 rounded-lg font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900;
+    }
+
+    .btn-primary {
+        @apply btn bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
+    }
+
+    .btn-secondary {
+        @apply btn bg-gray-700 text-white hover:bg-gray-600 focus:ring-gray-500;
+    }
+
+    /* Cards */
+    .card {
+        @apply bg-gray-800 rounded-lg shadow-lg p-6;
+    }
+
+    /* Transitions */
+    .fade-enter-active,
+    .fade-leave-active {
+        @apply transition-opacity duration-200;
+    }
+
+    .fade-enter-from,
+    .fade-leave-to {
+        @apply opacity-0;
+    }
+}
